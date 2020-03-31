@@ -52,6 +52,7 @@ namespace Sitecore.Support.Speak.Applications
       this.TreeViewToggleButton.Parameters["IsVisible"] = bucketsIsEnabled;
 
       this.TreeView.Parameters["ShowHiddenItems"] = UserOptions.View.ShowHiddenItems.ToString();
+      this.TreeView.Parameters["ContentLanguage"] = WebUtil.GetQueryString("la");
 
       var selectedItemId = WebUtil.GetQueryString("id");
       if (!string.IsNullOrEmpty(selectedItemId))
